@@ -15,8 +15,6 @@ namespace Among_Us_APP.FOrms
         public static string imposterRole = "Imposter";
         public static string crewmateRole = "Crewmate";
 
-        private List<string> list = new List<string> { "Imposter", "Crewmate", "Crewmate", "Crewmate", "Crewmate" };
-
         public string role;
 
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
@@ -24,6 +22,12 @@ namespace Among_Us_APP.FOrms
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         {
             InitializeComponent();
+            string[] list = new string[5];
+            list[0] = "Imposter";
+            list[1] = "Crewmate";
+            list[2] = "Crewmate";
+            list[3] = "Crewmate";
+            list[4] = "Crewmate";
             if (imposter == true)
             {
                 role = imposterRole;
@@ -33,13 +37,13 @@ namespace Among_Us_APP.FOrms
                 role = crewmateRole;
             } else if (random == true)
             {
-                int value = (int) new Random().NextInt64();
-                while (checkVar(value, list) == false)
-                {
-                    checkVar(value, list);
-                    Console.WriteLine(value.ToString());
-                }
-                if (list[value] == imposterRole)
+                Random rnd = new Random();
+                //int value = (int) new Random().NextInt64();
+                //while (checkVar(value, list) == false)
+                //{
+                    //value = (int)new Random().NextInt64();
+                //}
+                if (list[rnd.Next(0, 2)] == imposterRole)
                 {
                     role = imposterRole;
                 } else
