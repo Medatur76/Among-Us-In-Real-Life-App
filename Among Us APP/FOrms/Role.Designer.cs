@@ -94,6 +94,9 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Click This";
             this.linkLabel1.UseCompatibleTextRendering = true;
+            this.linkLabel1.LinkArea = new LinkArea(0, 22);
+            this.linkLabel1.Links.Add(24, 9, "https://github.com/Medatur76/Among-Us-In-Real-Life-App/blob/master/README.md#role-choosing-and-how-to-do-it");
+            this.linkLabel1.LinkClicked += new LinkLabelLinkClickedEventHandler(LinkedLabelClicked);
             // 
             // Role
             // 

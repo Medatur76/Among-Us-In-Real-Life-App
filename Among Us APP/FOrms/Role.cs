@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Among_Us_APP.FOrms
+﻿namespace Among_Us_APP.FOrms
 {
     public partial class Role : Form
     {
@@ -35,18 +25,20 @@ namespace Among_Us_APP.FOrms
             else if (crewmate == true)
             {
                 role = crewmateRole;
-            } else if (random == true)
+            }
+            else if (random == true)
             {
                 Random rnd = new Random();
                 //int value = (int) new Random().NextInt64();
                 //while (checkVar(value, list) == false)
                 //{
-                    //value = (int)new Random().NextInt64();
+                //value = (int)new Random().NextInt64();
                 //}
                 if (list[rnd.Next(0, 2)] == imposterRole)
                 {
                     role = imposterRole;
-                } else
+                }
+                else
                 {
                     role = crewmateRole;
                 }
@@ -77,16 +69,10 @@ namespace Among_Us_APP.FOrms
             }
         }
 
-        private bool checkVar(int object1, List<string> list1)
+        private void LinkedLabelClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (object1 >= list1.Count || object1 < 0)
-            {
-                object1 = (int) new Random().NextInt64();
-                return false;
-            } else
-            {
-                return true;
-            }
+            this.linkLabel1.LinkVisited = true;
+            System.Diagnostics.Process.Start("https://github.com/Medatur76/Among-Us-In-Real-Life-App/blob/master/README.md#role-choosing-and-how-to-do-it");
         }
     }
 }

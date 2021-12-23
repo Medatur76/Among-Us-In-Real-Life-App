@@ -1,39 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Among_Us_APP.FOrms;
-
-namespace Among_Us_APP.FOrms
+﻿namespace Among_Us_APP.FOrms
 {
     public partial class Tasks : Form
     {
+
+        private string role;
+
         public Tasks(string role)
         {
             InitializeComponent();
-            if (role == Role.imposterRole)
+            if (role == null)
             {
-                this.label1.Visible = true;
-            }
-            else if (role == Role.crewmateRole)
-            {
-                this.label2.Visible = true;
+                this.role = new Role(false, false, true).getRole();
             }
             else
             {
-                return;
+                this.role = role;
             }
         }
-
         private void Tasks_Load(object sender, EventArgs e)
         {
             this.label1.Visible = false;
             this.label2.Visible = false;
+            if (role == Role.imposterRole)
+            {
+                this.label1.Visible = true;
+            }
+            else
+            {
+                this.label2.Visible = true;
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
