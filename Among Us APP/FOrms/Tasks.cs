@@ -4,6 +4,7 @@
     {
 
         private string role;
+        private string downloadFilePath;
 
         public Tasks(string role)
         {
@@ -39,6 +40,15 @@
         private void label2_Click(object sender, EventArgs e)
         {
             return;
+        }
+
+        public static void triggerTask(string task) {
+            switch (task) {
+                case "download":
+                    break;
+                case "download2":
+                    break;
+            }
         }
     }
 }
