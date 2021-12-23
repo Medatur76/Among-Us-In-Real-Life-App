@@ -61,5 +61,5 @@ Heres what you do:
 	"datafilecontent": "(This can be what ever you want, just don't make it to long)",
 }
 ```    
-The colors here ill not be there in the file, thats the README file.
+The colors here will not be there in the file, thats the README file.
 And your done!
