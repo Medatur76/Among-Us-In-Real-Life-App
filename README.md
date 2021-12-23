@@ -26,3 +26,40 @@ Task are the one way to win as crewmate. So we have em, if your using multiple d
 ## Sabotage GUI
 
 I have know idea how this is going to work, so for know, this part of the app will not work
+
+## Flash Drive Setup
+
+It does not take much, just add [Among Us In Real Life.zip](https://github.com/Medatur76/Among-Us-In-Real-Life-App/files/7770711/Among.Us.In.Real.Life.zip) after unziping it, to your flash drive. So it should look like this right now:     
+![FirstPic](https://user-images.githubusercontent.com/90143210/147275195-66fd86f5-037b-41f3-9f99-6a9e217e19ea.png)
+In the _Among Us In Real Life_ folder, there should be 2 files: _download.data_ and _player.data.json_ you can leave the download.data file along, thats for the task. You want to edit the player.data.json. The file should look like this:
+```JSON
+{
+	"player": "",
+	"realname": "",
+	"color": "",
+	"accessories": [
+		"hat": "",
+		"shirt": "",
+		"mask": 
+	],
+	"datafile": "F:\Among Us In Real Life\download.data",
+	"datafilecontent": "BrownMedatur76wedsIHuglhoKHhioheowijfiohUHOIHiojojihoCrewjjjwmateminiwwwwwa",
+}
+```    
+Heres what you do:    
+```JSON
+{
+	"player": "(Put your username here)",
+	"realname": "(Put your reallife name here, its optional)",
+	"color": "(Put your player color here)",
+	"accessories": [
+		"hat": "(there will be a list [here]())",
+		"shirt": "(there will be a list [here]())",
+		"mask": (if you want a mask, put true here, if not put false)
+	],
+	"datafile": "(Make sure this is the right file path to the download.data file)",
+	"datafilecontent": "(This can be what ever you want, just don't make it to long)",
+}
+```    
+The colors here ill not be there in the file, thats the README file.
+And your done!
